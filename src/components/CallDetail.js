@@ -4,14 +4,14 @@ import api from '../api/dummyApi'
 
 const CallDetail = () => {
 
+  //get the id from the params and using it to get call details
   const { id } = useParams()
   const call = api.getCallDetail(id);
-
-
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
 
+      {/* Number/Name and Archived indicator */}
       <div className="flex items-center justify-between mb-4">
         <p className="text-xl font-semibold">{call.from}</p>
         <p className={`text-xs font-semibold ${call.is_archived ? 'text-red-600' : 'text-green-600'}`}>
@@ -20,6 +20,8 @@ const CallDetail = () => {
       </div>
 
       <div className='space-y-10 text-base'>
+
+        {/* Recent Call info */}
         <div className='bg-gray-200 rounded-md p-3 items-center justify-between'>
         
           <div className='flex justify-between mb-2'>
@@ -33,13 +35,12 @@ const CallDetail = () => {
 
         </div>
 
+        {/* Call location */}
         <div className='bg-gray-200 rounded-md p-3 flex justify-between'>
           <p className="text-gray-600 font-semibold mb-1">Aircall number via</p>
           <p>{call.via}</p>
         </div>        
       </div>
-
-
 
     </div>
   );
