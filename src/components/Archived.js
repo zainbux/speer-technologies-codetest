@@ -28,8 +28,7 @@ const ActivityFeed = () => {
       <div className="max-h-96 overflow-y-auto mt-5">
         <ul className="flex flex-col gap-4 items-center">
           {archivedActivities.map((call) => (
-            <Link to={`/${call.id}`} className='w-5/6 ' key={call.id}>
-              <div className="flex items-center gap-4 bg-gray-200 p-4 rounded-lg shadow-md hover:bg-gray-300 cursor-pointer">
+              <div className="flex items-center gap-4 w-5/6 bg-gray-200 p-4 rounded-lg shadow-md hover:bg-gray-300 cursor-pointer">
 
                 {/* Outgoing/Incoming call icon */}
                 <div className="text-2xl">
@@ -62,7 +61,6 @@ const ActivityFeed = () => {
                 </div>
 
               </div>   
-            </Link>
           ))}
         </ul>
       </div>
