@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html, body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  body {
+    background: #233142;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    color: #333333;
+    line-height: 1;
   }
-  to {
-    transform: rotate(360deg);
+
+  #app {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
+  
+  #app .container {
+    width: 376px;
+    height: 666px;
+    z-index: 100;
+  
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  }
+  
+  #app .container-view {
+    padding: 20px;
+  }
+  
+
+  /* styles/globals.css */
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Style the thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* On hover, add a darker background color */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+  
